@@ -1,0 +1,21 @@
+<!-- HTML CODE -->
+<html xmlns:th="http:www.thymeleaf.org" lang="en">
+<table>
+    <thead>
+    <tr>
+        <th> Hotel Name </th>
+        <th> Address </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:if="${hotels.empty}">
+        <td colspan="2"> No Hotels Available </td>
+    </tr>
+    <tr th:each="hotel : ${hotels}">
+        <td><span th:text="${hotel.hotelName}"> Hotel Name </span></td>
+        <td><span th:text="${hotel.hotelAddress}"> Address </span></td>
+        <td><span th:text="${hotel.contactNo}">ContactNo</span></td>
+    </tr>
+    </tbody>
+</table>
+</html>
